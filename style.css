@@ -1,0 +1,176 @@
+/* --- Global Reset & Professional Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #fdfaf4; /* Soft warm ivory cream background from reference image */
+    color: #2c2c2c; /* Clean dark charcoal for premium readability */
+    line-height: 1.6;
+}
+
+/* --- Header Section (Modern Minimalistic) --- */
+.restaurant-header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+    border-bottom: 1px solid #f0e6d6;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.restaurant-header h1 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.4rem;
+}
+
+.restaurant-header .tagline {
+    font-size: 1.1rem;
+    color: #ff8c00; /* Warm orange accent from the reference design button */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* --- Main Layout Container --- */
+.menu-container {
+    max-width: 1140px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Category Sections --- */
+.menu-category {
+    margin-bottom: 4rem;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    font-weight: 600;
+}
+
+/* Subtle accent line below section titles */
+.category-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #ff8c00;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 2px;
+}
+
+/* --- Sub-sections for Veg and Non-Veg (Main Course) --- */
+.sub-category-title {
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem 0;
+    padding-left: 0.5rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Indicators classes if you want to explicitly label them */
+.veg-title {
+    border-left: 4px solid #2e7d32; /* Elegant Green */
+}
+
+.non-veg-title {
+    border-left: 4px solid #c62828; /* Elegant Red */
+}
+
+/* --- Responsive CSS Grid for Cards --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+/* --- Modern Menu Cards (As seen in Tasty Bites layout) --- */
+.menu-item {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #eae1d4; /* Soft boundary layout line */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.08);
+    border-color: #ff8c00; /* Orange highlight on hover */
+}
+
+/* Flexbox alignment for Item Name & Price */
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 10px;
+}
+
+.item-name {
+    font-size: 1.15rem;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.item-price {
+    font-weight: 700;
+    color: #e67e22; /* Warm price indicator tag color */
+    font-size: 1.15rem;
+    white-space: nowrap;
+}
+
+.item-description {
+    font-size: 0.92rem;
+    color: #666666; /* Light gray text for detailed description */
+    font-weight: 400;
+}
+
+/* --- Beautiful Dark Footer (Exact Match to Reference Bottom Section) --- */
+.restaurant-footer {
+    background-color: #1c1c1e; /* Clean Solid Pitch Dark Background */
+    color: #a1a1a6;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    margin-top: 6rem;
+    border-top: 3px solid #ff8c00;
+}
+
+.restaurant-footer p {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+}
+
+.restaurant-footer p:first-child {
+    color: #ffffff; /* Bright address details text */
+    font-weight: 500;
+}
+
+/* --- Responsive Adjustments for Mobile Screen Layouts --- */
+@media (max-width: 600px) {
+    .restaurant-header {
+        padding: 2.5rem 1rem;
+    }
+    .restaurant-header h1 {
+        font-size: 2.2rem;
+    }
+    .menu-grid {
+        grid-template-columns: 1fr; /* Single column layout on small devices */
+        gap: 1.2rem;
+    }
+}
