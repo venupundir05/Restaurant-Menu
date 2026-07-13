@@ -224,6 +224,8 @@ body {
 }
 
 
+
+
 @media (max-width: 768px) {
     .restaurant-header {
         padding: 50px 15px;
@@ -240,5 +242,336 @@ body {
     
     .category-title {
         font-size: 1.8rem;
+    }
+}
+
+/* Reviews Section Styling */
+.reviews-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+.review-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.review-text {
+    font-style: italic;
+    color: var(--text-dark);
+}
+.review-author {
+    margin-top: 15px;
+    color: var(--accent-orange);
+    font-weight: 600;
+}
+
+/* Booking & Reservation Section */
+.booking-section {
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+}
+.booking-title {
+    font-family: 'Marcellus', serif;
+    color: var(--accent-gold);
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+.booking-desc {
+    margin: 20px auto;
+    max-width: 600px;
+    color: #eaeaea;
+    font-size: 1.1rem;
+}
+.booking-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: var(--accent-orange);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.booking-btn:hover {
+    background-color: transparent;
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+/* Real Google Map Container Styling */
+.map-container {
+    margin-top: 50px;
+    height: 350px; 
+    width: 100%;   
+    border-radius: 8px;
+    border: 2px solid var(--accent-gold);
+    overflow: hidden; 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+.embedded-map {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.map-container:hover {
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2); 
+    transform: translateY(-3px);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+.faq-container {
+    margin-top: 30px;
+}
+.faq-item {
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-left: 4px solid var(--accent-gold);
+    border-radius: 4px;
+    box-shadow: var(--card-shadow);
+}
+.faq-question {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--primary-color);
+    outline: none;
+    list-style: none;
+    position: relative;
+    padding-right: 30px;
+}
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+/* Luxury plus/minus indicator */
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-gold);
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+.faq-item[open] .faq-question::after {
+    content: '−';
+    color: var(--accent-orange);
+}
+.faq-item[open] .faq-question {
+    color: var(--accent-orange);
+    margin-bottom: 10px;
+}
+.faq-answer {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    animation: fadeIn 0.4s ease-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grids alignment fix including Desserts/Beverages */
+.menu-category .menu-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    justify-content: center !important;
+    gap: 25px !important;
+}
+.menu-category .menu-item {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 150px;
+}
+/* Premium Luxury Footer Styling */
+.restaurant-footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand {
+    font-family: 'Marcellus', serif;
+    color: var(--accent-gold);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.footer-desc {
+    font-size: 0.9rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.footer-heading {
+    font-family: 'Marcellus', serif;
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold);
+    padding-left: 5px; /* Subtle slide effect on hover */
+}
+
+.footer-info {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+/* Footer Bottom Base */
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #333333;
+    text-align: center;
+}
+
+.footer-socials {
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    color: var(--accent-gold);
+    margin: 0 12px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    color: #ffffff;
+    transform: translateY(-3px); /* Smooth lift animation */
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+}
+
+.credits-text {
+    font-size: 0.75rem;
+    color: var(--accent-orange);
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    .footer-grid {
+        text-align: center;
+    }
+    .footer-links a:hover {
+        padding-left: 0; /* Mobile par slide effect disabled */
+    }
+}
+
+
+/* SVG Icons Styling inside Footer */
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--accent-gold); /* Custom theme gold color */
+    transition: var(--transition);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-icon:hover svg {
+    fill: #ffffff; /* Hover par white ho jayega */
+}
+
+/* FAQ Smooth Animation & Custom Arrow Indicator */
+.faq-item summary {
+    position: relative;
+    padding-right: 30px;
+}
+
+/* Adding a luxury plus/minus custom indicator */
+.faq-item summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent-gold);
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+    color: var(--accent-orange);
+}
+
+/* Styling the answer display transition */
+.faq-answer {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
