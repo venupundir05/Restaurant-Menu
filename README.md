@@ -44,5 +44,4 @@ This project helped in practicing:
 # Project Status
 - Completed
   
-Shilpi Kumari
-B.Tech ECE-AI, IGDTUW
+
